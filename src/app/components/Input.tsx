@@ -6,9 +6,10 @@ export default function Input(){
 
     const [email,setEmail] = useState('')
     const [error,setError] = useState(false)
-    const [win , setWin] = useState(window.innerWidth)
+    const [win , setWin] = useState(0)
 
     useEffect(() => {
+        setWin(window.innerWidth)
         const handleResize = () => {
           setWin(window.innerWidth);
         };
